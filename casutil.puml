@@ -1,0 +1,54 @@
+@startuml
+
+!define TITLE_FONT_SIZE 14
+!define ACTOR_FONT_SIZE 12
+!define PARTICIPANT_FONT_SIZE 12
+!define CASE_FONT_SIZE 12
+
+skinparam title {
+    FontSize TITLE_FONT_SIZE
+    BorderColor #000000
+    BackgroundColor #F0F0F0
+}
+
+skinparam actor {
+    FontSize ACTOR_FONT_SIZE
+    BackgroundColor White
+    BorderColor Black
+}
+
+skinparam participant {
+    FontSize PARTICIPANT_FONT_SIZE
+    BackgroundColor LightSkyBlue
+    BorderColor Black
+}
+
+skinparam usecase {
+    FontSize CASE_FONT_SIZE
+    BackgroundColor LightGreen
+    BorderColor Black
+}
+
+title Gestion des Comptes Rendus de Visite
+
+actor Visiteur as visitor
+participant "Application Web" as app
+
+visitor -> app: Se connecter
+
+visitor -> app: Créer un rapport
+app -> app: Sélectionner un médecin, un motif, une date et saisir un bilan
+
+visitor -> app: Consulter ses rapports
+visitor -> app: Supprimer un rapport
+
+visitor -> app: Consulter son profil
+visitor -> app: Consulter les détails de son médecin
+visitor -> app: Modifier un rapport
+
+visitor -> app: Rechercher un médecin
+visitor -> app: Consulter les rapports associés à un médecin
+
+visitor -> app: Envoyer un mail au médecin
+
+@enduml

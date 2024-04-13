@@ -1,0 +1,218 @@
+/* Reset des styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles de base pour le corps de la page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+p {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+/* En-tête */
+header {
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Barre de navigation */
+nav {
+  text-align: center;
+  margin-top: 20px;
+}
+/* Styles pour les liens du menu de navigation */
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #000;
+}
+
+/* Contenu principal */
+.main-content {
+  padding: 20px;
+}
+
+/* Styles pour le formulaire d'inscription */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+form ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+form li {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form .password-section {
+  display: flex;
+  align-items: center;
+}
+
+form .password-section label {
+  margin-bottom: 0;
+}
+
+form .button {
+  text-align: center;
+}
+
+form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Ajoutez des styles spécifiques à cette page ici si nécessaire */
+.form-container {
+  margin-top: 50px; /* Déplace le formulaire plus bas par rapport au header */
+}
+.form-group {
+    margin-bottom: 20px; /* Espacement entre les champs du formulaire */
+}
+/* Pied de page */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+/* Style pour les tableaux */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.custom-table th, .custom-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.custom-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.custom-table tr:hover {
+    background-color: #f2f2f2;
+}
+/* Ajoute une marge supérieure au tableau pour le déplacer plus bas que le titre h1 */
+.table-container {
+    margin-top: 20px;
+}
+
+/* Style pour le select */
+#medecin {
+    width: 100%; /* Fait en sorte que le select soit large */
+}
+
+/* Style pour le textarea */
+#bilan {
+    width: 100%; /* Fait en sorte que le textarea soit large */
+    resize: vertical; /* Permet le redimensionnement vertical uniquement */
+}
+
+/* Style pour le bouton */
+.button input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+

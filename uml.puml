@@ -1,0 +1,87 @@
+@startuml
+
+!define TableEntity class #LightBlue
+!define ReferenceEntity class #FFA07A
+!define TableRelation association #2E8B57
+
+skinparam class {
+    BackgroundColor LightCyan
+    BorderColor Black
+    ArrowColor Black
+}
+
+entity Medecin << TableEntity >> {
+  +idM : int
+  nomM : varchar(50)
+  prenomM : varchar(50)
+  adresse : varchar(50)
+  tel : varchar(50)
+  specialiteComplementaire : varchar(50)
+  departement : varchar(50)
+  --
+  PK(idM)
+}
+
+entity Visiteur << TableEntity >> {
+  +idV : int
+  nomV : varchar(50)
+  prenomM : varchar(50)
+  login : varchar(50)
+  mdp : varchar(50)
+  adresse : varchar(50)
+  cp : int
+  ville : varchar(50)
+  dateEmbauche : date
+  --
+  PK(idV)
+}
+
+entity famille << TableEntity >> {
+  +idF : int
+  libelle : varchar(50)
+  --
+  PK(idF)
+}
+
+entity Rapport << TableEntity >> {
+  +IdR : int
+  dates : date
+  motif : varchar(50)
+  bilan : varchar(50)
+  idV : int
+  idM : int
+  --
+  PK(IdR)
+  FK(idV) REFERENCES Visiteur(idV)
+  FK(idM) REFERENCES Medecin(idM)
+}
+
+entity medicament << TableEntity >> {
+  +idME : int
+  nomCommercial : varchar(50)
+  composition : varchar(50)
+  effets : varchar(50)
+  contreIndications : varchar(50)
+  idF : int
+  --
+  PK(idME)
+  FK(idF) REFERENCES famille(idF)
+}
+
+entity Offrir << TableEntity >> {
+  +IdR : int
+  +idME : int
+  quantite : varchar(50)
+  --
+  PK(IdR, idME)
+  FK(IdR) REFERENCES Rapport(IdR)
+  FK(idME) REFERENCES medicament(idME)
+}
+
+Medecin --o{ Rapport : Participe
+Visiteur --o{ Rapport : Crée
+Rapport -- Offrir : Contient
+Offrir }-- medicament : Offre
+famille }--o medicament : Appartient_à
+
+@enduml
